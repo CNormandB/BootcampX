@@ -12,3 +12,8 @@ ORDER BY teacher;
     console.log(`${row.cohort}: ${row.teacher}`);
   })
 });
+
+const cohortName = process.argv[2];
+const limit = process.argv[3] || 5;
+// Store all potentially malicious values in an array.
+const values = [`%${cohortName}%`, limit];
